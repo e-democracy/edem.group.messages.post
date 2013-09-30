@@ -1,0 +1,57 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+  metal:use-macro="context/@@groupserver_menu_layout/page">
+  <head>
+  	<title metal:fill-slot="title">
+      Post in
+      <span tal:replace="view/topicTitle">
+        Standard Template for a Single Post
+      </span>:
+      <span tal:replace="view/groupInfo/name"/>:
+      <span tal:replace="view/siteInfo/name"/>
+    </title>
+    <tal:block metal:fill-slot="metadata">
+      <tal:block define="topicTitle view/topicTitle; 
+        relatedPosts view/relatedPosts;
+        pageTemplateFileName string:browser/templates/navlinksmeta.pt"
+        replace="structure provider:groupserver.PostNavLinks">
+        The intra-topic navigation links, for going between posts
+      </tal:block>
+      <meta name="description" tal:attributes="content view/post/summary"/>
+      <link rel="bookmark" title="Group Homepage" href="#"
+        tal:attributes="title view/groupInfo/name;
+        href view/groupInfo/relativeURL" />
+    </tal:block>
+  </head>
+  <body>
+    <div metal:fill-slot="body" id="single-post-page">
+      <h1>Post in
+        <cite tal:content="view/topicTitle">Topic</cite></h1>
+      <p tal:define="topicTitle view/topicTitle; 
+        relatedPosts view/relatedPosts"
+        tal:replace="structure provider:groupserver.PostNavLinks">
+        The intra-topic navigation links, for going between posts
+      </p>
+      <p tal:define="post view/post;
+                     isPublic view/isPublic"
+        tal:replace="structure provider:groupserver.Post">
+        The email message is rendered by the Post content provider,
+        not by this page.
+      </p>
+      <p tal:define="topicTitle view/topicTitle; 
+        relatedPosts view/relatedPosts"
+        tal:replace="structure provider:groupserver.PostNavLinks">
+        The intra-topic navigation links, for going between posts
+      </p>
+      <div id="hide-the-post" title="Hide the Post">
+        <p class="loading">Loading…</p>
+      </div><!--hide-the-post-->
+    </div><!--single-post-page-->
+    <tal:block metal:fill-slot="javascript">
+      <script type="text/javascript"
+        src="/++resource++sharebox-20100721.js">&#160;</script>
+      <script type="text/javascript"
+        src="/++resource++hide-post-20110415.js">&#160;</script>
+    </tal:block>
+  </body>
+</html>
+
