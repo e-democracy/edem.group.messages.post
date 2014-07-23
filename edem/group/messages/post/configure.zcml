@@ -2,14 +2,6 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
-  <browser:page 
-    for="Products.XWFMailingListManager.interfaces.IGSMessagesFolder" 
-    name="gspost" 
-    class="gs.group.messages.post.singlepost.GSPostView" 
-    template="browser/templates/singlepost.pt" 
-    layer="edem.skin.interfaces.IEDemSkin" 
-    permission="zope2.Public" />
-
   <adapter
     for="zope.interface.Interface 
          edem.skin.interfaces.IEDemLayer 
