@@ -34,6 +34,7 @@ setup(name='edem.group.messages.post',
     install_requires=[
         'setuptools',
         'edem.skin',
+        'gs.group.member.base',
         'gs.group.messages.post',
         # -*- Extra requirements: -*-
     ],
