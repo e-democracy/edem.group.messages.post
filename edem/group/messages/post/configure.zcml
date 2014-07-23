@@ -7,12 +7,12 @@
     name="gspost" 
     class="gs.group.messages.post.singlepost.GSPostView" 
     template="browser/templates/singlepost.pt" 
-    layer="gs.skin.ogn.edem.interfaces.IEDemSkin" 
+    layer="edem.skin.interfaces.IEDemSkin" 
     permission="zope2.Public" />
 
   <adapter
     for="zope.interface.Interface 
-         gs.skin.ogn.edem.interfaces.IEDemLayer 
+         edem.skin.interfaces.IEDemLayer 
          zope.interface.Interface" 
     factory=".postcontentprovider.EDEMPostContentProvider" 
     provides="zope.contentprovider.interfaces.IContentProvider" 

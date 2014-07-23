@@ -1,6 +1,5 @@
 # coding=utf-8
-from gs.shim.group.messages.post.postcontentprovider import \
-    GSPostContentProvider
+from gs.group.messages.post.postcontentprovider import GSPostContentProvider
 from canhide import can_hide_post
 
 

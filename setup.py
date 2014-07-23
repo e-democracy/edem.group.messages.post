@@ -33,7 +33,7 @@ setup(name='edem.group.messages.post',
     zip_safe=True,
     install_requires=[
         'setuptools',
-        'gs.skin.ogn.edem',
+        'edem.skin',
         'gs.group.messages.post',
         # -*- Extra requirements: -*-
     ],
