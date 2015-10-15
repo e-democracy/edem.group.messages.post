@@ -2,6 +2,7 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
+<<<<<<< HEAD
   <browser:page
     for="Products.XWFMailingListManager.interfaces.IGSMessagesFolder"
     name="gspost"
@@ -16,5 +17,13 @@
          zope.interface.Interface"
     factory=".postcontentprovider.EDEMPostContentProvider"
     provides="zope.contentprovider.interfaces.IContentProvider"
+=======
+  <adapter
+    for="zope.interface.Interface 
+         edem.skin.interfaces.IEDemLayer 
+         zope.interface.Interface" 
+    factory=".postcontentprovider.EDEMPostContentProvider" 
+    provides="zope.contentprovider.interfaces.IContentProvider" 
+>>>>>>> ba7ca026541cff77f0df67189ebf218833615584
     name="groupserver.Post"/>
 </configure>

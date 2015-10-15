@@ -12,7 +12,7 @@ setup(name='edem.group.messages.post',
                       open(os.path.join("docs", "HISTORY.txt")).read(),
     # See https://pypi.python.org/pypi?%3Aaction=list_classifiers for values
     classifiers=[
-      "Development Status :: 1 - Planning",
+      "Development Status :: 5 - Production/Stable",
       "Environment :: Web Environment",
       "Framework :: Zope2",
       "Intended Audience :: Developers",
@@ -33,8 +33,14 @@ setup(name='edem.group.messages.post',
     zip_safe=True,
     install_requires=[
         'setuptools',
+<<<<<<< HEAD
         'gs.skin.ogn.edem',
         'gs.group.messages.post.base',
+=======
+        'edem.skin',
+        'gs.group.member.base',
+        'gs.group.messages.post',
+>>>>>>> ba7ca026541cff77f0df67189ebf218833615584
         # -*- Extra requirements: -*-
     ],
     entry_points="""

@@ -20,6 +20,9 @@ This product provides customizations to the way in which posts are displayed
 on forums.e-democracy.org, both on individual post pages and topic pages. It
 overrides aspects of `gs.group.messages.post`_.
 
+Specifically, it overrides the decision on who can hide a post. Using this egg,
+only a group or site administrator can hide posts, *not* the authors of posts.
+
 Resources
 =========
 
