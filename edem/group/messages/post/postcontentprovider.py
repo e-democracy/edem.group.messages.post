@@ -1,10 +1,12 @@
 # coding=utf-8
 from __future__ import absolute_import, unicode_literals
-from gs.group.messages.post.postcontentprovider import GSPostContentProvider
+from gs.group.messages.post.hide.viewlet import HideViewlet
 from .canhide import can_hide_post
 
 
-class EDEMPostContentProvider(GSPostContentProvider):
-    def __init__(self, context, request, view):
-        GSPostContentProvider.__init__(self, context, request, view)
-        self.can_hide_post = can_hide_post
+class EDemHideViewlet(HideViewlet):
+    @property
+    def show(self):
+        retval = can_hide_post(self.loggedInUser, self.groupInfo, 
+                               self.manager.post)
+        return retval
