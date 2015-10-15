@@ -1,13 +1,13 @@
-==============================
+============================
 ``edem.group.messages.post``
-==============================
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 E-Democracy customizations of the display of posts
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :Author: `Bill Bushey`_
 :Contact: Bill Bushey <bill.bushey@e-democracy.org>
-:Date: 2013-09-30
+:Date: 2014-10-15
 :Organization: `E-Democracy.org`_
 :Copyright: This document is licensed under a
   `Creative Commons Attribution-Share Alike 3.0 License`_
@@ -16,12 +16,13 @@ E-Democracy customizations of the display of posts
 Introduction
 ===========
 
-This product provides customizations to the way in which posts are displayed
-on forums.e-democracy.org, both on individual post pages and topic pages. It
-overrides aspects of `gs.group.messages.post`_.
-
-Specifically, it overrides the decision on who can hide a post. Using this egg,
-only a group or site administrator can hide posts, *not* the authors of posts.
+This product provides customizations to the way in which posts
+are displayed on forums.e-democracy.org, both on individual post
+pages and topic pages. It overrides aspects of
+`gs.group.messages.post.hide`_, specifically the decision on who
+can hide a post. Using this egg, *only* a group or site
+administrator can hide posts; the authors of posts must seek
+permission.
 
 Resources
 =========
@@ -36,5 +37,5 @@ Resources
 .. _Bill Bushey: http://groupserver.org/p/wbushey
 .. _Creative Commons Attribution-Share Alike 3.0 License:
    http://creativecommons.org/licenses/by-sa/3.0/
-.. _gs.group.messages.post:
-   https://source.iopen.net/groupserver/gs.group.messages.post
+.. _gs.group.messages.post.hide:
+   https://source.iopen.net/groupserver/gs.group.messages.post.hide

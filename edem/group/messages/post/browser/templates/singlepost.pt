@@ -1,5 +1,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
-  metal:use-macro="context/@@groupserver_menu_layout/page">
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      metal:use-macro="context/@@groupserver_menu_layout/page">
   <head>
         <title metal:fill-slot="title">
       Post in
