@@ -2,19 +2,19 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            xmlns:browser="http://namespaces.zope.org/browser">
 
-  <browser:page 
-    for="Products.XWFMailingListManager.interfaces.IGSMessagesFolder" 
-    name="gspost" 
-    class="gs.group.messages.post.singlepost.GSPostView" 
-    template="browser/templates/singlepost.pt" 
-    layer="gs.skin.ogn.edem.interfaces.IEDemSkin" 
+  <browser:page
+    for="Products.XWFMailingListManager.interfaces.IGSMessagesFolder"
+    name="gspost"
+    class="gs.group.messages.post.page.singlepost.GSPostView"
+    template="browser/templates/singlepost.pt"
+    layer="gs.skin.ogn.edem.interfaces.IEDemSkin"
     permission="zope2.Public" />
 
   <adapter
-    for="zope.interface.Interface 
-         gs.skin.ogn.edem.interfaces.IEDemLayer 
-         zope.interface.Interface" 
-    factory=".postcontentprovider.EDEMPostContentProvider" 
-    provides="zope.contentprovider.interfaces.IContentProvider" 
+    for="zope.interface.Interface
+         gs.skin.ogn.edem.interfaces.IEDemLayer
+         zope.interface.Interface"
+    factory=".postcontentprovider.EDEMPostContentProvider"
+    provides="zope.contentprovider.interfaces.IContentProvider"
     name="groupserver.Post"/>
 </configure>

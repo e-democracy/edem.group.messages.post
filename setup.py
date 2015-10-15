@@ -10,7 +10,7 @@ setup(name='edem.group.messages.post',
     description="E-Democracy customizations of the display of posts",
     long_description=open("README.txt").read() + "\n" +
                       open(os.path.join("docs", "HISTORY.txt")).read(),
-    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers for values 
+    # See https://pypi.python.org/pypi?%3Aaction=list_classifiers for values
     classifiers=[
       "Development Status :: 1 - Planning",
       "Environment :: Web Environment",
@@ -28,13 +28,13 @@ setup(name='edem.group.messages.post',
     url='http://www.e-democracy.org/',
     license='GPL 3',
     packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['edem', 'edem.group', 'edem.group.messages'], 
+    namespace_packages=['edem', 'edem.group', 'edem.group.messages'],
     include_package_data=True,
     zip_safe=True,
     install_requires=[
         'setuptools',
         'gs.skin.ogn.edem',
-        'gs.group.messages.post',
+        'gs.group.messages.post.base',
         # -*- Extra requirements: -*-
     ],
     entry_points="""
